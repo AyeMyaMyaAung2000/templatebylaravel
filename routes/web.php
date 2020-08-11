@@ -13,7 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    "Hello";
-});
+// Route::get('/', function () {
+//     return view('welcome');
+ 
+// })->name('home');//data show one web page
+Route::get('/','PageController@homefun'
+
+)->name("homename");
+
+Route::get('contact','PageController@contactfun'
+)->name("contactname");
+
+Route::get('about','PageController@aboutfun'
+)->name("aboutname");
+
+//data show one web page
+
+Route::get('post','PageController@postfun'
+)->name("postname");
+
